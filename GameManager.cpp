@@ -34,7 +34,7 @@ using namespace WET1;
             return INVALID_INPUT;
         }
 
-        shared_ptr<Group> group(*(this->groups->find(GroupID)));
+        shared_ptr<Group> group = *(this->groups->find(GroupID));
         if(this->players_by_id->exists(PlayerID) || group == nullptr){
             return FAILURE;
         }
