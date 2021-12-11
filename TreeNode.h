@@ -1,9 +1,6 @@
 #ifndef OCTOPUS_GAMES_TREENODE_H
 #define OCTOPUS_GAMES_TREENODE_H
 
-#include <string>
-#include <iostream>
-#include <cstdio>
 #include <stdexcept>
 #include "Utils.h"
 
@@ -64,7 +61,7 @@ namespace WET1 {
         static TreeNode<K,T>* arrayToTree(const K sortedArr_K[], const T sortedArr_T[], int size);
         static TreeNode<K,T>* merge(const TreeNode<K,T> *tree1, const TreeNode<K,T> *tree2, int size1, int size2);
         void print2D() const;
-        void removeAll(TreeNode<K,T>* node);
+        static void removeAll(TreeNode<K,T>* node);
 
         template <typename P>
         void query(P pred, T* dest_arr, int size, int* found){
@@ -638,8 +635,8 @@ namespace WET1 {
     void TreeNode<K,T>::removeAll(TreeNode<K,T> * node){
         if(node!= nullptr)
         {
-            removeAll(node->left) ;
-            removeAll(node->right) ;
+            TreeNode<K,T>::removeAll(node->left) ;
+            TreeNode<K,T>::removeAll(node->right) ;
             delete node;
         }
     }

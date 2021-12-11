@@ -35,4 +35,12 @@
 .idea
 
 # build
-cmake-build-debug*
+cmake-build*
+CMakeFiles
+x64
+*.vcxproj*
+*.sln
+cmake_install.cmake
+CMakeCache.txt
+Debug
+octopus_games.dir

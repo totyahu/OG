@@ -1,0 +1,452 @@
+Init done.
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddGroup: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: FAILURE
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+AddPlayer: SUCCESS
+IncreaseLevel: SUCCESS
+IncreaseLevel: FAILURE
+ReplaceGroup: FAILURE
+GroupIndex	||	Player
+1	||	1226
+2	||	1634
+3	||	938
+4	||	830
+5	||	358
+6	||	185
+7	||	1252
+8	||	1090
+9	||	1028
+10	||	481
+11	||	1310
+12	||	1176
+13	||	217
+14	||	469
+and there are no more players!
+ReplaceGroup: SUCCESS
+Rank	||	Player
+1	||	674
+2	||	185
+3	||	188
+4	||	217
+5	||	283
+6	||	361
+7	||	425
+8	||	469
+9	||	544
+10	||	577
+11	||	938
+12	||	1028
+13	||	1176
+14	||	1221
+15	||	1540
+16	||	1634
+17	||	1921
+18	||	1939
+19	||	1983
+20	||	358
+21	||	481
+22	||	558
+23	||	612
+24	||	669
+25	||	672
+26	||	757
+27	||	830
+28	||	994
+29	||	1037
+30	||	1090
+31	||	1135
+32	||	1196
+33	||	1199
+34	||	1226
+35	||	1308
+36	||	1310
+37	||	1488
+38	||	1520
+39	||	1657
+40	||	40
+41	||	78
+42	||	161
+43	||	287
+44	||	373
+45	||	475
+46	||	598
+47	||	702
+48	||	797
+49	||	897
+50	||	1024
+51	||	1034
+52	||	1051
+53	||	1078
+54	||	1360
+55	||	1453
+56	||	1456
+57	||	1553
+58	||	1584
+59	||	1830
+60	||	1837
+61	||	1981
+62	||	3
+63	||	127
+64	||	136
+65	||	199
+66	||	284
+67	||	299
+68	||	867
+69	||	1079
+70	||	1151
+71	||	1195
+72	||	1257
+73	||	1484
+74	||	1688
+75	||	1710
+76	||	1739
+77	||	1958
+78	||	49
+79	||	101
+80	||	460
+81	||	736
+82	||	737
+83	||	896
+84	||	986
+85	||	1252
+86	||	1949
+87	||	232
+88	||	340
+89	||	368
+90	||	505
+91	||	1027
+92	||	1036
+93	||	1071
+94	||	1096
+95	||	1097
+96	||	1274
+97	||	1331
+98	||	1341
+99	||	1399
+100	||	1564
+101	||	1674
+102	||	1763
+103	||	99
+104	||	383
+105	||	511
+106	||	695
+107	||	800
+108	||	845
+109	||	880
+110	||	1045
+111	||	1060
+112	||	1076
+113	||	1243
+114	||	1302
+115	||	1403
+116	||	1849
+117	||	1945
+118	||	1961
+119	||	42
+120	||	70
+121	||	75
+122	||	164
+123	||	180
+124	||	191
+125	||	508
+126	||	543
+127	||	700
+128	||	770
+129	||	798
+130	||	851
+131	||	1025
+132	||	1216
+133	||	1282
+134	||	1321
+135	||	1417
+136	||	1494
+137	||	1566
+138	||	1723
+139	||	1860
+140	||	1991
+141	||	37
+142	||	116
+143	||	300
+144	||	362
+145	||	482
+146	||	620
+147	||	651
+148	||	882
+149	||	1211
+150	||	1324
+151	||	1377
+152	||	1630
+153	||	1696
+154	||	1904
+155	||	9
+156	||	303
+157	||	402
+158	||	470
+159	||	849
+160	||	874
+161	||	972
+162	||	1061
+163	||	1359
+164	||	1427
+165	||	1866
+166	||	1867
+167	||	1975
+168	||	1985
+169	||	1993
+and there are no more players!
+GroupIndex	||	Player
+1	||	1226
+2	||	1634
+3	||	938
+4	||	830
+5	||	358
+6	||	1252
+7	||	1090
+8	||	1028
+9	||	481
+and there are no more players!
+RemovePlayer: FAILURE
+GetAllPlayersByLevel: FAILURE
+GroupIndex	||	Player
+1	||	1226
+2	||	1634
+3	||	938
+4	||	830
+5	||	358
+6	||	1252
+and there are no more players!
+GetHighestLevel: FAILURE
+AddPlayer: FAILURE
+Highest level player is: 361
+GroupIndex	||	Player
+1	||	1226
+2	||	1634
+and there are no more players!
+IncreaseLevel: SUCCESS
+Rank	||	Player
+1	||	1090
+2	||	78
+3	||	598
+4	||	1034
+5	||	1257
+6	||	1710
+7	||	232
+8	||	695
+9	||	300
+10	||	620
+11	||	1904
+and there are no more players!
+IncreaseLevel: SUCCESS
+ReplaceGroup: FAILURE
+GroupIndex	||	Player
+1	||	1226
+2	||	1634
+3	||	938
+4	||	830
+5	||	358
+6	||	1252
+7	||	1090
+8	||	1028
+9	||	481
+10	||	1310
+11	||	1176
+and there are no more players!
+RemovePlayer: SUCCESS
+ReplaceGroup: SUCCESS
+Highest level player is: 1196
+IncreaseLevel: SUCCESS
+Highest level player is: 1176

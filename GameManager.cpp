@@ -1,14 +1,24 @@
 
 #include "GameManager.h"
 
-using namespace WET1;
 
-//namespace WET1{
+
+namespace WET1{
     GameManager::GameManager(){
-        this->players_by_id = new AVLTree<int, shared_ptr<Player>>();
-        this->players_by_level = new AVLTree<IdLevelKey, shared_ptr<Player>>();
-        this->groups = new AVLTree<int, shared_ptr<Group>>();
-        this->not_empty_groups= new AVLTree<int, shared_ptr<Group>>();
+//        this->players_by_id = new AVLTree<int, shared_ptr<Player>>();
+//        this->players_by_level = new AVLTree<IdLevelKey, shared_ptr<Player>>();
+//        this->groups = new AVLTree<int, shared_ptr<Group>>();
+//        this->not_empty_groups = new AVLTree<int, shared_ptr<Group>>();
+
+//        this->players_by_id = make_shared<AVLTree<int, shared_ptr<Player>>>();
+//        this->players_by_level = make_shared<AVLTree<IdLevelKey, shared_ptr<Player>>>();
+//        this->groups = make_shared<AVLTree<int, shared_ptr<Group>>>();
+//        this->not_empty_groups = make_shared<AVLTree<int, shared_ptr<Group>>>();
+
+        this->players_by_id = unique_ptr<AVLTree<int, shared_ptr<Player>>>(new AVLTree<int, shared_ptr<Player>>());
+        this->players_by_level = unique_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>>(new AVLTree<IdLevelKey, shared_ptr<Player>>());
+        this->groups = unique_ptr<AVLTree<int, shared_ptr<Group>>>(new AVLTree<int, shared_ptr<Group>>());
+        this->not_empty_groups = unique_ptr<AVLTree<int, shared_ptr<Group>>>(new AVLTree<int, shared_ptr<Group>>());
     }
 
     GameManager * GameManager::Init() {
@@ -24,7 +34,9 @@ using namespace WET1;
             return FAILURE;
         }
 
-        this->groups->insert(GroupID, make_shared<Group>(GroupID));
+        shared_ptr<Group> group = make_shared<Group>(GroupID);
+
+        this->groups->insert(GroupID, group);
 
         return SUCCESS;
     }
@@ -34,7 +46,7 @@ using namespace WET1;
             return INVALID_INPUT;
         }
 
-        shared_ptr<Group> group = *(this->groups->find(GroupID));
+        shared_ptr<Group> group = this->findGroup(GroupID);
         if(this->players_by_id->exists(PlayerID) || group == nullptr){
             return FAILURE;
         }
@@ -57,7 +69,7 @@ using namespace WET1;
             return INVALID_INPUT;
         }
 
-        shared_ptr<Player> player(*(this->players_by_id->find(PlayerID)));
+        shared_ptr<Player> player = this->findPlayerById(PlayerID);
 
         if(player == nullptr){
             return FAILURE;
@@ -83,13 +95,13 @@ using namespace WET1;
             return INVALID_INPUT;
         }
 
-        shared_ptr<Player> player_by_id(*(this->players_by_id->find(PlayerID)));
+        shared_ptr<Player> player_by_id = this->findPlayerById(PlayerID);
 
         if(player_by_id == nullptr){
             return FAILURE;
         }
 
-        shared_ptr<Player> player_by_level(*(this->players_by_level->find(player_by_id->toKey())));
+        shared_ptr<Player> player_by_level = this->findPlayerByKey(player_by_id->toKey());
 
         shared_ptr<Group> group = player_by_id->getGroup();
 
@@ -123,7 +135,7 @@ using namespace WET1;
         }
 
         else{
-            shared_ptr<Group> group = *(this->groups->find(GroupID));
+            shared_ptr<Group> group = this->findGroup(GroupID);
 
             if(group == nullptr){
                 return FAILURE;
@@ -145,8 +157,8 @@ using namespace WET1;
             return INVALID_INPUT;
         }
 
-        shared_ptr<Group> delete_group = *(this->groups->find(GroupID));
-        shared_ptr<Group> replace_group = *(this->groups->find(ReplacementID));
+        shared_ptr<Group> delete_group = this->findGroup(GroupID);
+        shared_ptr<Group> replace_group = this->findGroup(ReplacementID);
 
         if(delete_group == nullptr || replace_group == nullptr){
             return FAILURE;
@@ -202,7 +214,7 @@ using namespace WET1;
             return SUCCESS;
         }
         else {
-            shared_ptr<Group> group = *(this->groups->find(GroupID));
+            shared_ptr<Group> group = this->findGroup(GroupID);
             if(group == nullptr){
                 return FAILURE;
             }
@@ -274,15 +286,67 @@ using namespace WET1;
 
 
     void GameManager::Quit(GameManager* gameManager){
-        delete gameManager;
+        if(gameManager->players_by_id){
+            gameManager->players_by_id.reset();
+        }
+        if(gameManager->players_by_level){
+            gameManager->players_by_level.reset();
+        }
+        if(gameManager->groups){
+            gameManager->groups.reset();
+        }
+        if(gameManager->not_empty_groups){
+            gameManager->not_empty_groups.reset();
+        }
+
+        if(gameManager){
+            delete gameManager;
+        }
     }
 
 
     GameManager::~GameManager() {
-        delete players_by_level;
-        delete players_by_id;
-        delete groups;
-        delete not_empty_groups;
+        this->players_by_id = nullptr;
+        this->players_by_level = nullptr;
+        this->groups = nullptr;
+        this->not_empty_groups = nullptr;
+
+//        if(this->players_by_id){
+//            this->players_by_id.reset();
+//        }
+//        if(this->players_by_level){
+//            this->players_by_level.reset();
+//        }
+//        if(this->groups){
+//            this->groups.reset();
+//        }
+//        if(this->not_empty_groups){
+//            this->not_empty_groups.reset();
+//        }
     }
 
-//}
+    shared_ptr<Group> GameManager::findGroup(int group_id){
+        shared_ptr<Group>* group = this->groups->find(group_id);
+        if(group == nullptr){
+            return nullptr;
+        }
+        return *group;
+    }
+
+    shared_ptr<Player> GameManager::findPlayerById(int player_id){
+        shared_ptr<Player>* player = this->players_by_id->find(player_id);
+        if(player == nullptr){
+            return nullptr;
+        }
+        return *player;
+    }
+
+    shared_ptr<Player> GameManager::findPlayerByKey(const IdLevelKey& key){
+        shared_ptr<Player>* player = this->players_by_level->find(key);
+        if(player == nullptr){
+            return nullptr;
+        }
+        return *player;
+    }
+
+}

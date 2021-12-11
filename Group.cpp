@@ -2,8 +2,10 @@
 #include "Group.h"
 #include "Player.h"
 
+using namespace std;
 
 #define DEFAULT_ID -1
+
 
 namespace WET1{
     Group::Group() : id(DEFAULT_ID){
@@ -11,13 +13,13 @@ namespace WET1{
     }
 
     Group::Group(int id) : id(id){
-        this->players = make_shared<AVLTree<IdLevelKey, shared_ptr<Player>>>();
+        this->players = std::unique_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>>(new AVLTree<IdLevelKey, shared_ptr<Player>>());
     }
 
     Group::~Group(){
         this->players.reset();
 //        delete this->players;
-        this->players = nullptr;
+//        this->players = nullptr;
     }
 
     bool Group::operator==(const Group& other_group){
@@ -62,8 +64,8 @@ namespace WET1{
 
     bool Group::mergeGroup(shared_ptr<Group> other_group){
         if(this->isEmpty()){
-            this->players = other_group->players;
-            other_group->players.reset();
+            this->players.swap(other_group->players);
+//            other_group->players.reset();
 //            delete other_group->players;
 //            other_group->players = nullptr;
 
@@ -71,7 +73,7 @@ namespace WET1{
             return true;
         }
 
-        shared_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>> merged_tree = AVLTree<IdLevelKey, shared_ptr<Player>>::merge(
+        unique_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>> merged_tree = AVLTree<IdLevelKey, shared_ptr<Player>>::merge(
                 *(this->players), *(other_group->players)
         );
 
@@ -80,7 +82,8 @@ namespace WET1{
         }
 
         this->players.reset();
-        this->players = merged_tree;
+        this->players.swap(merged_tree);
+        merged_tree.reset();
         this->players->apply(updateGroup, this);
 
         return true;

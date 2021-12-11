@@ -1,16 +1,17 @@
 #ifndef OCTOPUS_GAMES_GROUP_H
 #define OCTOPUS_GAMES_GROUP_H
 
+#include <memory>
 #include "AVLTree.h"
 #include "IdLevelKey.h"
-//#include "Player.h"
+
 
 namespace WET1{
     class Player;
 
     class Group {
         int id;
-        shared_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>> players;
+        unique_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>> players;
 
     public:
         Group();

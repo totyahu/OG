@@ -11,13 +11,24 @@
 
 namespace WET1{
     class GameManager {
-        AVLTree<int, shared_ptr<Group>> * groups;
-        AVLTree<int, shared_ptr<Player>> * players_by_id;
-        AVLTree<IdLevelKey, shared_ptr<Player>> * players_by_level;
-        AVLTree<int, shared_ptr<Group>> * not_empty_groups;
+        unique_ptr<AVLTree<int, shared_ptr<Group>>> groups;
+        unique_ptr<AVLTree<int, shared_ptr<Player>>> players_by_id;
+        unique_ptr<AVLTree<IdLevelKey, shared_ptr<Player>>> players_by_level;
+        unique_ptr<AVLTree<int, shared_ptr<Group>>> not_empty_groups;
+
+//        AVLTree<int, shared_ptr<Group>> * groups;
+//        AVLTree<int, shared_ptr<Player>> * players_by_id;
+//        AVLTree<IdLevelKey, shared_ptr<Player>> * players_by_level;
+//        AVLTree<int, shared_ptr<Group>> * not_empty_groups;
+
+        shared_ptr<Group> findGroup(int group_id);
+        shared_ptr<Player> findPlayerById(int player_id);
+        shared_ptr<Player> findPlayerByKey(const IdLevelKey& key);
+
 
     public:
         explicit GameManager();
+//        ~GameManager() = default;
         ~GameManager();
         GameManager *Init();
         StatusType AddGroup(int GroupID);
@@ -29,7 +40,6 @@ namespace WET1{
         StatusType GetAllPlayersByLevel(int GroupID, int **Players, int *numOfPlayers);
         StatusType GetGroupsHighestLevel(int numOfGroups, int **Players);
         static void Quit(GameManager* gameManager);
-        Group* findGroupById(int groupId);
 
         void printGame();
 

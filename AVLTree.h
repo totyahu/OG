@@ -38,7 +38,7 @@ namespace WET1 {
         int getSize() const;
         void toSortedArray(K sortedArr_K[], T sortedArr_T[], int size = -1) const;
 //        static shared_ptr<AVLTree<K,T>> merge(const AVLTree<K,T> *tree1, const AVLTree<K,T> *tree2);
-        static shared_ptr<AVLTree<K,T>> merge(const AVLTree<K,T>& tree1, const AVLTree<K,T>& tree2);
+        static unique_ptr<AVLTree<K,T>> merge(const AVLTree<K,T>& tree1, const AVLTree<K,T>& tree2);
         void print2D() const;
 
         template<typename P>
@@ -93,7 +93,7 @@ namespace WET1 {
 //        }
         if(this->root){
             this->max = nullptr;
-            this->root->removeAll(this->root);
+            this->root->TreeNode<K,T>::removeAll(this->root);
 //            delete this->root;
             this->root = nullptr;
         }
@@ -161,9 +161,9 @@ namespace WET1 {
 //    }
 
     template<class K, class T>
-    shared_ptr<AVLTree<K,T>> AVLTree<K,T>::merge(const AVLTree<K,T>& tree1, const AVLTree<K,T>& tree2) {
+    unique_ptr<AVLTree<K,T>> AVLTree<K,T>::merge(const AVLTree<K,T>& tree1, const AVLTree<K,T>& tree2) {
         TreeNode<K,T>* new_tree = TreeNode<K,T>::merge(tree1.root, tree2.root, tree1.size, tree2.size);
-        return make_shared<AVLTree<K,T>>(new_tree, tree1.size + tree2.size);
+        return unique_ptr<AVLTree<K,T>>(new AVLTree<K,T>(new_tree, tree1.size + tree2.size));
     }
 
     template<class K, class T>
